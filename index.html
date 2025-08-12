@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopMart - Your Premier Online Store</title>
-  <script type="module" crossorigin src="/Simple-Ecommerce-Website/assets/index-CM4DsCUc.js"></script>
+  <script type="module" crossorigin src="/Simple-Ecommerce-Website/assets/index-D7yp3pQZ.js"></script>
   <link rel="stylesheet" crossorigin href="/Simple-Ecommerce-Website/assets/index-pbnY9CQX.css">
 </head>
 <body>
@@ -24,6 +24,7 @@
                 <a href="#" class="nav-link cart-link" data-page="cart">
                     Cart (<span class="cart-count">0</span>)
                 </a>
+                <a href="#" class="nav-link" data-page="contact">Contact</a>
                 <div class="auth-section">
                     <div id="auth-buttons" class="auth-buttons">
                         <button class="auth-btn login-btn" onclick="showLoginModal()">Login</button>
@@ -205,6 +206,28 @@
                     <p>Thank you for your purchase. You will receive a confirmation email shortly.</p>
                     <button class="continue-shopping-btn" onclick="navigateToPage('home')">Continue Shopping</button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact-page" class="page">
+            <div class="container">
+                <h2 class="page-title">Contact Us</h2>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Name:</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email:</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message:</label>
+                        <textarea id="contact-message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="contact-btn">Send Message</button>
+                </form>
             </div>
         </div>
     </main>
