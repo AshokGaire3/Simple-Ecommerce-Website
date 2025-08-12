@@ -45,6 +45,7 @@ function navigateToPage(pageName) {
     const targetPage = document.getElementById(`${pageName}-page`);
     if (targetPage) {
         targetPage.classList.add('active');
+        console.log(`Navigated to: ${pageName}`); // Debug log
         
         // Update page title
         switch(pageName) {
@@ -74,10 +75,15 @@ function navigateToPage(pageName) {
             case 'success':
                 document.title = 'Order Complete - ShopMart';
                 break;
+            case 'contact':
+                document.title = 'Contact Us - ShopMart';
+                break;
         }
         
         // Scroll to top
         window.scrollTo(0, 0);
+    } else {
+        console.warn(`Page not found: ${pageName}`);
     }
 }
 
@@ -370,3 +376,9 @@ window.addEventListener('resize', handleResize);
 
 // Call once on load
 handleResize();
+
+window.navigateToPage = navigateToPage;
+window.showLoginModal = showLoginModal;
+window.showRegisterModal = showRegisterModal;
+window.logout = logout;
+window.closeModal = closeModal;

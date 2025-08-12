@@ -153,6 +153,12 @@ function logout() {
     auth.logout();
 }
 
+// Expose functions to window
+window.showLoginModal = showLoginModal;
+window.showRegisterModal = showRegisterModal;
+window.closeModal = closeModal;
+window.logout = logout;
+
 // Form handlers
 document.addEventListener('DOMContentLoaded', function() {
     // Login form
